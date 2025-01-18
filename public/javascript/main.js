@@ -44,6 +44,7 @@ function disableCards() {
 
     resetBoard();
 }
+
 function unflipCards() {
     // Réinitialise les cartes après un délai
     lockBoard = true; // Verrouille le plateau temporairement
@@ -52,7 +53,7 @@ function unflipCards() {
         secondCard.classList.remove('flip');
 
         resetBoard();
-    }, 1500);
+    }, 1000);
 }
 
 function resetBoard() {

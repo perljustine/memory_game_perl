@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 body {
@@ -9,7 +10,9 @@ body {
   display: flex;
   background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
   font-family: 'Arial', sans-serif;
+  cursor:crosshair;
 }
+
 
 .memory-game {
   width: 640px;
@@ -20,6 +23,7 @@ body {
   perspective: 1000px;
 }
 
+
 .memory-card {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
@@ -28,8 +32,8 @@ body {
   transform-style: preserve-3d;
   transition: transform 0.5s;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 20px;
+  cursor: grab;
 }
 
 .memory-card:hover {
@@ -50,7 +54,7 @@ body {
   height: 100%;
   padding: 10px;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 20px;
   backface-visibility: hidden;
   display: flex;
   justify-content: center;
@@ -72,9 +76,11 @@ body {
 
 @keyframes celebrate {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  50% { transform: scale(2); }
 }
 
+
 .memory-card.matched {
-  animation: celebrate 0.5s ease-in-out;
+  animation: celebrate 1s ease-in-out;
+ 
 }
