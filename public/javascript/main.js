@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll('.memory-card'); // Récupération de toutes les cartes
+const buttons = document.querySelectorAll('.btn')
 
 let hasFlippedCard = false;
 let lockBoard = false; // Empêche les clics pendant le traitement
